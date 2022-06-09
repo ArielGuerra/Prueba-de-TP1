@@ -6,7 +6,7 @@
 
 int main() {
 
-   int Linea;
+   int linea;
    //pedir al usuario ingreso de caracteres
    printf ("Ingrese linea a convertir: ");
    //recorrer linea hasta teminarla
@@ -15,21 +15,24 @@ int main() {
       if (isupper (linea)){
 
          linea = tolower (linea);
-
-         goto salida;
+         //salida 
+         putchar (linea);
       }
-      if (islower(linea)){
+      else if (islower (linea)){
 
-         linea = toupper(Linea);
+         linea = toupper (linea);
+         //salida 
+         putchar (linea);
+         //si es un digito no hace nada
       }
-      if (isdigit(Linea)){
-
-         Linea = '\0';
+      if (isdigit (linea)){
+         
+         linea;
       }
       salida:
-      //salida de caracteres
-      putchar (Linea);
+      //salida 
+      putchar (linea);
    }
 
-   return EXIT_SUCCESS;
+   return 0; //puse 0 en el retorno porque EXIT_SUCCESS le daba error
 }
