@@ -7,31 +7,27 @@
 int main() {
 
    int linea;
-   //pedir al usuario ingreso de caracteres
-   printf ("Ingrese linea a convertir: ");
+ 
    //recorrer linea hasta teminarla
    while (EOF != (linea = getchar())){ 
       //si es mayuscula la cambia a minuscula y viseversa
       if (isupper (linea)){
 
-         linea = tolower (linea);
-         //salida 
-         putchar (linea);
+         putchar (tolower (linea));
       }
-      else if (islower (linea)){
+      if (islower (linea)){
 
-         linea = toupper (linea);
-         //salida 
-         putchar (linea);
-         //si es un digito no hace nada
+         putchar (toupper (linea));
       }
-      if (isdigit (linea)){
+      if (ispunct (linea)){
          
-         linea;
+        putchar (linea);
       }
-      salida:
-      //salida 
-      putchar (linea);
+      if isspace (linea){
+      
+        putchar (linea);
+      }  
+      
    }
 
    return 0; //puse 0 en el retorno porque EXIT_SUCCESS le daba error
